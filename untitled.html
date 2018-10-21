@@ -1,0 +1,401 @@
+ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+     <link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+    <script src="jquery.min.js"></script> <title> Calculate Intersection of Two Sets | (A Intersect B) AnB | Online Algebra Calculator </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Intersection of sets calculator, Intersection of two sets calculator, Intersection of set, Intersection of two sets, A Intersect B, AnB, algebra calculator, algebra Intersection sets calculator, Intersect two sets, Intersect sets," /> 
+	<meta name="description" content="Online algebra calculator to calculate Intersection of two sets (A Intersection B) AnB." />
+<link rel="icon" type="image/jpeg" href="/favicon.jpg" >
+<script language=javascript>
+
+function comput()
+{
+var aset1=new Array();
+var aset2=new Array();
+var inter=new Array();
+var j=0;
+var str='';
+aset1=document.getElementById('set1').value.split(',');
+aset2=document.getElementById('set2').value.split(',');
+for(var i=0;i<aset1.length;i++)
+{
+if(aset2.find(aset1[i]))
+inter[j++]=aset1[i];
+}
+for(var j=0;j<inter.length;j++)
+{
+if(j!=inter.length-1)
+str+=inter[j]+',';
+else
+str+=inter[j];
+}
+document.getElementById('inter').value=str;
+
+
+}
+
+Array.prototype.find = function(searchStr) {
+  var returnArray = false;
+  for (i=0; i<this.length; i++) {
+    if (typeof(searchStr) == 'function') {
+      if (searchStr.test(this[i])) {
+        if (!returnArray) { returnArray = [] }
+        returnArray.push(i);
+      }
+    } else {
+      if (this[i]===searchStr) {
+        if (!returnArray) { returnArray = [] }
+        returnArray.push(i);
+      }
+    }
+  }
+  return returnArray;
+}
+</script>
+
+	</head>
+<body><div id="wrapper">
+<style>.navbar { margin-bottom: 0px !important;}</style>
+
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+    <script src="jquery.min.js"></script>
+    <script src="/bs.js"></script>
+    
+    
+<!--<div class="navbar navbar-default" >
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="http://eguruchela.com/header/logo2.png" alt="eguruchela"></a>
+          </div>
+         <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav"> 
+             <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Physics<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+          			 <li><a href="/physics/formulas/">Formulas</a></li>
+         			  <li><a href="/physics/calculator/">Calculator</a> </li>
+        			   <li><a href="/physics/learning/">Learning</a> </li> 
+        	   </ul>
+           </li>
+                  
+
+     
+    	 <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chemistry<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+              
+          				 <li><a href="/chemistry/formulas/">Formulas</a></li>
+                        <li><a href="/chemistry/calculator/">Calculator</a></li>
+               
+          			 <li><a href="/chemistry/learning/">Learning</a> </li>
+        		 </ul>
+           
+           	</li>
+                   
+               <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Math<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+               
+           			<li><a href="/math/formulas/">formulas</a></li>
+          			 <li><a href="/math/calculator/">Calculator</a> </li>
+  
+     
+    			 </ul>
+     		</li>
+         </ul>
+-->
+</div>
+</div>
+</div>
+
+    <script async="async" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   
+
+    
+ <header id="header">
+  ﻿
+<div id="navi" style="display:none;" >
+
+<table><tr>
+
+<td>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> 
+<a itemprop="url" href="/"> <span itemprop="title"><h4> : eguruchela </h4></span></a> </div> 
+</td>
+
+<td>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="/math" itemprop="url"> <span itemprop="title"><h4 style="color:#030">math </span> </h4></a> </div> 
+</td>
+
+
+<td>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> 
+<a href="/math/Calculator/" itemprop="url" ><span itemprop="title"><h4 style="color:#774E46">Calculator   </h4></span></a> </div> 
+</td>
+
+<td>
+<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> 
+<a href="http://eguruchela.com/math/Calculator/age-calculator.php" itemprop="url" ><span itemprop="title"><h4 style="color:#774E99;">intersection-of-set </h4></span></a></div>
+</td>
+
+
+
+
+
+
+</tr></table>
+</div>
+
+    <span style="margin-top:-20px;"> <center> <script id="mNCC" language="javascript">
+   medianet_width = "468";
+   medianet_height = "60";
+   medianet_crid = "841894471";
+   medianet_versionId = "111299";
+   (function() {
+       var isSSL = 'https:' == document.location.protocol;
+       var mnSrc = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/nmedianet.js?cid=8CUQ1DBU2' + (isSSL ? '&https=1' : '');
+       document.write('<scr' + 'ipt type="text/javascript" id="mNSC" src="' + mnSrc + '"></scr' + 'ipt>');
+   })();
+</script></center></span>	
+	</header><!-- #header-->
+    
+  
+
+
+		<div id="container">
+          
+<div id="sideLeft"> <div id="list4">
+<h4>Sets Calculator</h4>
+ <ul>
+
+     <li><a href="intersection-of-set">Intersection Of Set</a></li>
+     <li><a href="power-set">Power Set</a></li>
+     <li><a href="set-difference">Set Difference</a></li>
+     <li><a href="subset-of-set">Subset Of Set</a></li>
+     <li><a href="union-of-set">union-of-set</a></li>
+          <li><a href="symmetric-difference">symmetric-difference</a></li>
+    <li><a href="venn-diagram-2sets">venn-diagram-2sets</a></li>
+     <li><a href="venn-diagram-3sets">venn-diagram-3sets</a></li> 
+ <li> <a href="/math/Calculator/index">Go to index page</a></li>  
+  </ul>
+</div>   </div>
+        
+        
+			<div id="content">    
+ <h3>Intersection of Set(A Intersect B) or A∩B Calculation</h3><hr>
+Set is the relation of some given data or say set contains the elements of similar type or category. 
+A set is defined as the collection of elements, such as numbers or other objects, which are arranged in a group. The set with any numbers can be denoted in the symbol braces { }.
+The intersection of the sets A and set B is represented by A ∩ B and it is pronounced as A intersection B.<br>
+
+<img src="images/intersection of set.PNG" style="position: absolute; top: 5; right: 0; border: 50;" height=100px border=50px>
+ for example: 
+ The two sets of events A={1, 2, 3,4} <br> 
+ and B={3,4, 6, 7, 8} <br>the intersection of the sets we get
+ A ∩  B = {3, 4}
+
+
+<form name=mainfrm>
+<table class=result width=80% height=100%>
+<tr><td>
+</td></tr>
+<tr><td>Enter the values in the set1(seperated by comma)<td><input type=text id=set1 value=1,2,3,4></tr>
+<tr><td>Enter the values in the set2(seperated by comma)<td><input type=text id=set2 value=3,4,6,7,8></tr>
+<tr><td><td><input type=button value=Calculate onclick=comput()><input type=reset value=Reset></tr>
+<tr><td>Intersection of sets<td><input type=text id=inter readonly></tr>
+	</table>
+
+</form>
+  
+  
+    	</div><!-- #content-->
+         
+		</div><!-- #container-->
+
+</div><!-- #wrapper -->
+
+<footer id="footer">
+	
+ 
+    <div class="footer-container">
+        <div class="row-fluid main-links">
+        <div id="disqus_thread"></div>
+
+        <!--
+            <div class="span2">
+                <ul>
+                    <li class="heading footer-scroll-cue">About</li>
+                       <li><a href="http://eguruchela.com/about/">About</a></li>
+                      <li><a href="http://eguruchela.com/about/Our-Mission.php">Our Mission</a></li>
+                      <li><a href="http://eguruchela.com/about/Our-Team.php">Our Team</a></li>
+
+                </ul>
+            </div>
+            
+            -->
+<!--            
+               <div class="span2">
+                <ul>
+                    <li class="heading footer-scroll-cue">Math</li> 
+                <li><a href="/math/formulas/"> Formulas</a></li>
+                <li><a href="/math/Calculator/"> Online Calculator</a></li>
+                </ul>
+            </div>
+            
+             <div class="span2">
+                <ul>
+                    <li class="heading footer-scroll-cue">Physics</li> 
+                <li><a href="/physics/formulas/"> Formulas</a></li>
+                <li><a href="/physics/calculator/">Online Calculator</a></li>
+                <li><a href="/physics/learning/">Learning</a> </li>
+                
+                </ul>
+            </div>
+            
+              <div class="span2">
+                <ul>
+                    <li class="heading footer-scroll-cue">Chemisty</li> 
+             
+                <li><a href="/chemistry/formulas/"> Formulas</a></li>
+                <li><a href="/chemistry/calculator/">Online Calculator</a></li>
+              
+                <li><a href="/chemistry/learning/">Learning</a> </li>
+                
+                </ul>
+            </div>           
+-->                
+            
+            
+  <!--            <div class="span2">
+                <ul>
+                    <li class="heading footer-scroll-cue">Help</li>
+                    
+                    <li><a href="http://eguruchela.com/help/" data-tag="Footer" id="report" class="show-demo-dialog">Report a Problem</a></li>
+                    
+                    <li><a href="http://eguruchela.com/help/faq.php">FAQ</a></li>
+
+                    <li class="heading footer-scroll-cue">Contact Us</li>
+                    <li><a href="http://eguruchela.com/help/contact.php">Contact</a></li>
+                </ul>
+            </div>
+          <div class="span2">
+                <ul>
+                    <li class="heading footer-scroll-cue">Coaching</li>
+                    <li><a href="/class_profile">Coach Dashboard</a></li>
+                    <li><a href="/coach-res">Coach Resources</a></li>
+                    <li><a href="/coach-res/case-studies">Case Studies</a></li>
+                    <li><a href="/commoncore">Common Core</a></li>
+
+                    
+                </ul>
+            </div>
+            <div class="span2">
+                <ul>
+                    <li class="heading footer-scroll-cue">Careers</li>
+                    <li><a href="/Careers/">Careers</a></li>
+                   <li><a href="/Careers/Full-Time.php">Full Time</a></li>
+                   <li><a href="/Careers/Part-Time.php">Part Time</a></li>
+                   <li><a href="/Careers/Internships.php">Internships</a></li>
+                </ul>
+            </div>
+        
+        
+        <div class="span1">
+                <ul>
+ <li class="heading footer-scroll-cue">Social</li>
+ <li><a class="" href="" title="Facebook">Facebook</a></li>
+<li><a class=""  href="" title="Twitter">Twitter</a></li>
+           
+                </ul>
+            </div>
+        -->
+        
+<!--
+            <div class="span1">
+                <img class="handtree" src="http://eguruchela.com/header/logo2.png" alt="eguruchela">
+            </div>
+-->
+                
+            
+
+
+
+
+
+
+<!--
+			            <script>
+			
+			$(document).ready(function(){
+		
+
+
+ $('#content' ).css( "min-height", $( '#sideLeft').height() );		
+		
+		
+
+		
+
+		  });
+			
+
+			</script>
+			
+			
+			
+            
+            
+                <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43955078-1', 'eguruchela.com');
+  ga('send', 'pageview');
+
+</script>
+-->
+<!--<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'eguruchela';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>-->
+
+<!--<div id="spot-im-root"></div>
+<script type="text/javascript">!function(t,o,p){function e(){var t=o.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==o.location.protocol?"https":"http")+":"+p,o.body.appendChild(t)}t.spotId="a9764e2626f343ea35434779daa5248f",t.spotName="",t.allowDesktop=!0,t.allowMobile=!1,t.containerId="spot-im-root",e()}(window.SPOTIM={},document,"//www.spot.im/embed/scripts/launcher.js");</script>-->
+
+
+
+<!--
+        </div>
+        
+  
+    </div>
+    
+
+    <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+   I agree to have read and accepted the <a href="http://eguruchela.com/about/terms.php">terms</a> of use and privacy policy.    
+</footer #footer -->
+</body></html>
