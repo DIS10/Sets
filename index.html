@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+     <link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+    <script src="jquery.min.js"></script> <title> Calculate Intersection of Two Sets | (A Intersect B) AnB | Online Algebra Calculator </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="Intersection of sets calculator, Intersection of two sets calculator, Intersection of set, Intersection of two sets, A Intersect B, AnB, algebra calculator, algebra Intersection sets calculator, Intersect two sets, Intersect sets," /> 
+	<meta name="description" content="Online algebra calculator to calculate Intersection of two sets (A Intersection B) AnB." />
+<link rel="icon" type="image/jpeg" href="/favicon.jpg" >
+<script language=javascript>
+
+function comput()
+{
+var aset1=new Array();
+var aset2=new Array();
+var inter=new Array();
+var j=0;
+var str='';
+aset1=document.getElementById('set1').value.split(',');
+aset2=document.getElementById('set2').value.split(',');
+for(var i=0;i<aset1.length;i++)
+{
+if(aset2.find(aset1[i]))
+inter[j++]=aset1[i];
+}
+for(var j=0;j<inter.length;j++)
+{
+if(j!=inter.length-1)
+str+=inter[j]+',';
+else
+str+=inter[j];
+}
+document.getElementById('inter').value=str;
+
+
+}
+
+Array.prototype.find = function(searchStr) {
+  var returnArray = false;
+  for (i=0; i<this.length; i++) {
+    if (typeof(searchStr) == 'function') {
+      if (searchStr.test(this[i])) {
+        if (!returnArray) { returnArray = [] }
+        returnArray.push(i);
+      }
+    } else {
+      if (this[i]===searchStr) {
+        if (!returnArray) { returnArray = [] }
+        returnArray.push(i);
+      }
+    }
+  }
+  return returnArray;
+}
+</script>
+
+<link rel="stylesheet" href="bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+<script src="jquery.min.js"></script>
+<script src="/bs.js"></script>
+<script async="async" src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+
+<form name=mainfrm>
+<table class=result width=80% height=100%>
+<tr><td>
+</td></tr>
+<tr><td>Enter the values in the set1(seperated by comma)<td><input type=text id=set1 value=1,2,3,4></tr>
+<tr><td>Enter the values in the set2(seperated by comma)<td><input type=text id=set2 value=3,4,6,7,8></tr>
+<tr><td><td><input type=button value=Calculate onclick=comput()><input type=reset value=Reset></tr>
+<tr><td>Intersection of sets<td><input type=text id=inter readonly></tr>
+  </table>
+
+</form>
